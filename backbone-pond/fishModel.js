@@ -9,6 +9,8 @@ var Fish = Backbone.Model.extend({
   },
   toggleDescription : function(){
   	this.set('displayInfo',!this.get('defaults.displayInfo'))
+
+  	this.trigger('toggle:description', this.render, this)
   	
   }
  
