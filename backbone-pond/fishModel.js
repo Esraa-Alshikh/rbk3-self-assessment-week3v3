@@ -6,13 +6,10 @@ var Fish = Backbone.Model.extend({
     image: 'http://www.google.com',
     description: 'Regular old fish',
     displayInfo: false
-  }
+  },
   toggleDescription : function(){
-  	this.click();
-  	this.model.on('change:description', this.click, this)
-  	//this.FishView ();
-  	//this.set('tr','on')
-  	//this.model.on('change:description', this.click, this)
+  	this.set('displayInfo',!this.get('defaults.displayInfo'))
+  	
   }
  
 
